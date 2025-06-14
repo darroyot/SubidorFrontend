@@ -1,0 +1,6 @@
+@Subidor_de_imagenes_Front_HostAddress = http://localhost:5059
+
+GET {{Subidor_de_imagenes_Front_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

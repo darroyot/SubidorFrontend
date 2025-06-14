@@ -1,0 +1,111 @@
+﻿#imagenusuario {
+    height: 200px;
+    width: 200px;
+    display: none;
+    margin: 3% 0% 0% 30%;
+}
+
+
+h1{
+
+    text-align:center;
+    margin:3% 0% 1% 0%;
+}
+
+b {
+    margin: 0% 0% 1% 6%;
+}
+.main {
+    margin: 5% 0% 0% 18%;
+    background-color: ivory;
+    border: 2px solid #0088e1;
+}
+.tabla {
+    margin: 1% 0% 2% 0%;
+}
+#foto {
+    display: none;
+}
+
+#sube {
+    visibility: hidden;
+    margin: 3% 0% 0% 30%;
+    height: 60px;
+    width: 20%;
+    font-size: 20px;
+    color: white;
+    background-color: #0088e1;
+    border-style: none;
+    border-radius: 300px 300px 300px 300px;
+}
+
+
+
+
+#anidarfoto {
+    margin: 15% 0% 0% 128%;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    background-color: #0088e1;
+    border-style: none;
+    border-radius: 300px 300px 300px 300px;
+}
+
+
+#anidaraudio {
+    margin: 15% 0% 0% 59%;
+}
+
+
+
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+    .inputfile + label {
+        max-width: 80%;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        padding: 0.625rem 1.25rem;
+        margin: 0% 0% 0% 35%;
+    }
+
+        .inputfile + label svg {
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            fill: currentColor;
+            margin-top: -0.25em;
+            margin-right: 0.25em;
+        }
+
+.iborrainputfile {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Lato';
+}
+
+
+
+.inputfile-1 + label {
+    color: #fff;
+    background-color: #0088e1;
+}
+
+    .inputfile-1:focus + label,
+    .inputfile-1.has-focus + label,
+    .inputfile-1 + label:hover {
+        background-color: hotpink;

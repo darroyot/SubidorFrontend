@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 using Subidor_de_imagenes_Front.Interfaces;
 using Subidor_de_imagenes_Front.Models;
@@ -36,12 +36,11 @@ namespace Subidor_de_imagenes_Front.Controllers
             if (result.Ok)
             {
 
-                if (result.PhotoList[0].Image == null )
-                    return NotFound();
-
-                // Quitar prefijo si existe: "data:image/png;base64,..."
-              
-
+                if (result.PhotoList[0].Image == null) {
+                    return RedirectToAction("Main", "Subidor");
+                }
+                var path = Path.Combine(Directory.GetCurrentDirectory(),"/",result.PhotoList[0].Name);
+                
                 byte[] bytesImagen;
 
                 try
@@ -55,7 +54,7 @@ namespace Subidor_de_imagenes_Front.Controllers
 
                 var nombreArchivo = string.IsNullOrEmpty(result.PhotoList[0].Name) ? "imagen.png" : result.PhotoList[0].Name;
 
-                return File(bytesImagen, "image/png", nombreArchivo);
+                return File(bytesImagen, "image/png", path);
 
 
 
@@ -82,9 +81,9 @@ namespace Subidor_de_imagenes_Front.Controllers
         {
 
             string extensionArchivo = Path.GetExtension(Photo.FileName);
-
-            if (Photo.Length < 1000000 && extensionArchivo==".png")
-            {
+                              
+            if (Photo.Length < 16777216 && extensionArchivo==".png")
+            {                  
 
 
                 MemoryStream memoryStream = new MemoryStream();

@@ -4,7 +4,8 @@ Empezamos con el backend en la rama main,lo descargamos ,si esta en zip lo desco
 
 Abrimos la consola de paquetes Nugets e introducimos los siguientes comandos uno a uno para crear las migraciones.
 
-add-migration "nueva" Update-Database
+add-migration "nueva"
+Update-Database
 
 Para descargar el Frontend nos vamos a la rama master ,lo descargamos desde ahí ,descomprimimos y abrimos.
 
